@@ -25,6 +25,8 @@ const (
 	OtherVal
 )
 
+var TagLengthCutoff uint32
+
 // typeSize specifies the size in bytes of each type.
 var typeSize = map[uint16]uint32{
 	1:  1,
@@ -85,6 +87,10 @@ func DecodeTag(r ReadAtReader, order binary.ByteOrder) (*Tag, error) {
 	}
 
 	valLen := typeSize[t.Type] * t.Count
+	if TagLengthCutoff > 0 && valLen > TagLengthCutoff {
+		return nil, errors.New(fmt.Sprintf("tiff: tag length too large: %v", valLen))
+	}
+
 	var offset uint32
 	if valLen > 4 {
 		binary.Read(r, order, &offset)
