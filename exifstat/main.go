@@ -6,8 +6,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/rwcarlsen/goexif/exif"
-	"github.com/rwcarlsen/goexif/tiff"
+	"github.com/bdotdub/goexif/exif"
+	"github.com/bdotdub/goexif/tiff"
 )
 
 func main() {

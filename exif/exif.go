@@ -11,7 +11,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/rwcarlsen/goexif/tiff"
+	"github.com/bdotdub/goexif/tiff"
 )
 
 var validField map[FieldName]bool

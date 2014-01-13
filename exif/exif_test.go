@@ -8,7 +8,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/rwcarlsen/goexif/tiff"
+	"github.com/bdotdub/goexif/tiff"
 )
 
 // switch to true to regenerate regression expected values
