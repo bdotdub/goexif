@@ -12,7 +12,7 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/rwcarlsen/goexif/tiff"
+	"github.com/bdotdub/goexif/tiff"
 )
 
 const (
